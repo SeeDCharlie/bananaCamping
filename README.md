@@ -1,1 +1,1 @@
-# bananaCamping lugar de campamento a las afueras debuga - colombia
+# bananaCamping lugar de campamento a las afueras de buga - colombia
