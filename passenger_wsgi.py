@@ -12,7 +12,7 @@ sys.path.append(cwd + '/bananaCamping')  #You must add your project here
 sys.path.insert(0,'/home/bananacamping/venvBananaCamp/bin')
 sys.path.insert(0,cwd+'/home/bananacamping/venvBananaCamp/lib/python3.9/site-packages')
 
-os.environ['DJANGO_SETTINGS_MODULE'] = "bananaCamping/.settings"
+os.environ['DJANGO_SETTINGS_MODULE'] = "bananaCamping.settings"
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
 
