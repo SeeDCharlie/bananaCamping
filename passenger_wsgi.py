@@ -7,7 +7,7 @@ if sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)
 
 cwd = os.getcwd()
 sys.path.append(cwd)
-sys.path.append(cwd + '/SeeDCorp')  #You must add your project here
+sys.path.append(cwd + '/bananaCamping')  #You must add your project here
 
 sys.path.insert(0,'/home/bananacamping/venvBananaCamp/bin')
 sys.path.insert(0,cwd+'/home/bananacamping/venvBananaCamp/lib/python3.9/site-packages')
