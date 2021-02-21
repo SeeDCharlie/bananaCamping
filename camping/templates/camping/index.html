@@ -1,464 +1,301 @@
-<!DOCTYPE html>
-<html lang="en"><!-- Basic -->
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-     <!-- Site Metas -->
-    <title>Banana Eco-Camping</title>  
-    <meta name="keywords" content="bananacamping campamento experience">
-    <meta name="description" content="Sitio para acampar">
-    <meta name="author" content="banana eco-camping">
-
-    {% load static %}
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="{% static 'camping/images/icoFav.png' %}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{% static 'camping/images/apple-touch-icon.png">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'camping/css/bootstrap.min.css' %}">    
-	<!-- Site CSS -->
-    <link rel="stylesheet" href="{% static 'camping/css/style.1.css' %}">    
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{% static 'camping/css/responsive.css' %}">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'camping/css/custom.css' %}">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-	<!-- Start header -->
-	<header class="top-navbar">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{% extends 'camping/baset_uno.html' %}
+{% load static %}
+{% block content %}
+<!-- Start slides -->
+<div id="slides" class="cover-slides">
+	<ul class="slides-container">
+		<li class="text-center">
+			<img src="{% static 'camping/images/f_uno.JPG' %}" alt="">
 			<div class="container">
-				<a class="navbar-brand" href="{% url 'index' %}">
-					<img src="{% static 'camping/images/bana_ico_dos.png' %}" alt="" />
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbars-rs-food">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Inicio</a></li>
-						<li class="nav-item"><a class="nav-link" href="">Servicios</a></li>
-						<li class="nav-item"><a class="nav-link" href="">Conocenos</a></li>
-						
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Posts</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="">Categoria Uno</a>
-								<a class="dropdown-item" href="">Categoria Dos</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Mas</a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="">Reservaciones</a>
-								<a class="dropdown-item" href="">Galleria</a>
-							</div>
-						</li>
-						<li class="nav-item"><a class="nav-link" href="">Contactanos</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<!-- End header -->
-	
-	<!-- Start slides -->
-	<div id="slides" class="cover-slides">
-		<ul class="slides-container">
-			<li class="text-center">
-				<img src="{% static 'camping/images/f_uno.JPG' %}" alt="">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Bienvenidos a<br> Banana Eco-Camping</strong></h1>
-							<p class="m-b-40">
-								Un espacio para que tu y los que mas <br> quieres se conecten con nuestra madre naturaleza.
-							</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservacion</a></p>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="text-center">
-				<img src="{% static 'camping/images/f_dos.jpg' %}" alt="">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Regalate un<br>Momento con la Naturaleza</strong></h1>
-							<p class="m-b-40">
-								" Mi deseo es quedarme así siempre: viviendo con <br> tranquilidad en un pequeño rincón de la naturaleza" <br>
-								 -- Claude Monet
-							</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Ver Mas</a></p>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li class="text-center">
-				<img src="{% static 'camping/images/f_tres.jpg' %}" alt="">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<h1 class="m-b-20"><strong>Visita Nuestra<br>Galleria de Imagenes</strong></h1>
-							<p class="m-b-40">
-								Te damos a conocer la gran variedad de flora <br> y fauna que encontraras en La Habana Buga
-							</p>
-							<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Ver Mas</a></p>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-		<div class="slides-navigation">
-			<a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-			<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-		</div>
-	</div>
-	<!-- End slides -->
-	
-	<!-- Start About -->
-	<div class="about-section-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<img src="{% static 'camping/images/f_seis.jpg' %}" alt="" class="img-fluid">
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12 text-center">
-					<div class="inner-column">
-						<h1>Banana Eco-Camping<span> La Habana Buga</span></h1>
-						<h4>Pequeña Historia</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
-						<p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. Sed aliquam metus lorem, a pellentesque tellus pretium a. Nulla placerat elit in justo vestibulum, et maximus sem pulvinar.</p>
-						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Seguir Leyendo</a>
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="m-b-20"><strong>Bienvenidos a<br> Banana Eco-Camping</strong></h1>
+						<p class="m-b-40">
+							Un espacio para que tu y los que mas <br> quieres se conecten con nuestra madre naturaleza.
+						</p>
+						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservacion</a></p>
 					</div>
 				</div>
 			</div>
-		</div>
+		</li>
+		<li class="text-center">
+			<img src="{% static 'camping/images/f_dos.jpg' %}" alt="">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="m-b-20"><strong>Regalate un<br>Momento con la Naturaleza</strong></h1>
+						<p class="m-b-40">
+							" Mi deseo es quedarme así siempre: viviendo con <br> tranquilidad en un pequeño rincón de
+							la naturaleza" <br>
+							-- Claude Monet
+						</p>
+						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Ver Mas</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li class="text-center">
+			<img src="{% static 'camping/images/f_tres.jpg' %}" alt="">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="m-b-20"><strong>Visita Nuestra<br>Galleria de Imagenes</strong></h1>
+						<p class="m-b-40">
+							Te damos a conocer la gran variedad de flora <br> y fauna que encontraras en La Habana Buga
+						</p>
+						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Ver Mas</a></p>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="slides-navigation">
+		<a href="#" class="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+		<a href="#" class="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
 	</div>
-	<!-- End About -->
-	
-	<!-- Start QT -->
-	<div class="qt-box qt-background">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 ml-auto mr-auto text-left">
-					<p class="lead ">
-						"Aun el hombre más razonable tiene necesidad de volver a la Naturaleza, es decir, a su relación 
-						fundamental ilógica con todas las cosas."
+</div>
+<!-- End slides -->
+
+<!-- Start About -->
+<div class="about-section-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<img src="{% static 'camping/images/f_seis.jpg' %}" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 text-center">
+				<div class="inner-column">
+					<h1>Banana Eco-Camping<span> La Habana Buga</span></h1>
+					<h4>Pequeña Historia</h4>
+					<p>
+						La Habana pertenece a la zona rural oriental del municipio de Guadalajara de Buga - Valle, es un 
+						corregimiento ubicado a 14 km del casco urbano de Buga, a una altura de 1550 msnm , conformado por las veredas 
+						de La Habana, La Magdalena, La Piscina, El Janeiro, Las Frías, Alaska, El Diamante y Guadualejo – La Planta, 
+						Alto Cielo y la Cabaña.
 					</p>
-					<span class="lead">Friedrich Nietzsche</span>
+					<p>
+						La salida desde Buga se hace por el batallón, recorre el rio Guadalajara , también llamado rio de las piedras , el cual nace en la parte media de la Cordillera Central. 
+					</p>
+					<a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'about' %}">Seguir Leyendo</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- End QT -->
-	
-	<!-- Start Menu -->
-	<div class="menu-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>Servicios Especiales</h2>
-						<p>Kit de campamento, comida etc</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="special-menu text-center">
-						<div class="button-group filter-button-group">
-							<button class="active" data-filter="*">All</button>
-							<button data-filter=".carpa">Kit Campamento</button>
-							<button data-filter=".lunch">Comida</button>
+</div>
+<!-- End About -->
 
-						</div>
-					</div>
-				</div>
-			</div>
-				
-			<div class="row special-list">
-				<div class="col-lg-4 col-md-6 special-grid drinks carpa">
-					<div class="gallery-single fix">
-						<img src="{% static 'camping/images/kit_uno.jpg' %}" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Kit carpa 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $7.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid drinks carpa">
-					<div class="gallery-single fix">
-						<img src="{% static 'camping/images/kit_dos.jpg' %}" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Kit carpa 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $9.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid drinks carpa">
-					<div class="gallery-single fix">
-						<img src="{% static 'camping/images/kit_tres.jpg' %}" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Kit carpa 3</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $10.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch comida">
-					<div class="gallery-single fix">
-						<img src="{% static 'camping/images/img-04.jpg' %}" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Lunch 1</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $15.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch comida">
-					<div class="gallery-single fix">
-						<img src="{% static 'camping/images/img-05.jpg' %}" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Lunch 2</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $18.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid lunch comida">
-					<div class="gallery-single fix">
-						<img src="{% static 'camping/images/img-06.jpg' %}" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Special Lunch 3</h4>
-							<p>Sed id magna vitae eros sagittis euismod.</p>
-							<h5> $20.79</h5>
-						</div>
-					</div>
-				</div>
-				
-				
+<!-- Start QT -->
+<div class="qt-box qt-background">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 ml-auto mr-auto text-left">
+				<p class="lead ">
+					"Aun el hombre más razonable tiene necesidad de volver a la Naturaleza, es decir, a su relación
+					fundamental ilógica con todas las cosas."
+				</p>
+				<span class="lead">Friedrich Nietzsche</span>
 			</div>
 		</div>
 	</div>
-	<!-- End Menu -->
-	
-	<!-- Start Gallery -->
-	<div class="gallery-box">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>Galeria de Imagenes</h2>
-						<p>Conoce los Paisajes de la Habana Buga</p>
-					</div>
-				</div>
-			</div>
-			<div class="tz-gallery">
-				<div class="row">
-					<div class="col-sm-12 col-md-4 col-lg-4">
-						<a class="lightbox" href="{% static 'camping/images/g_uno.JPG' %}">
-							<img class="img-fluid" src="{% static 'camping/images/g_uno.JPG' %}" alt="Gallery Images">
-						</a>
-					</div>
-					<div class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="{% static 'camping/images/g_dos.JPG' %}">
-							<img class="img-fluid" src="{% static 'camping/images/g_dos.JPG' %}" alt="Gallery Images">
-						</a>
-					</div>
-					<div class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="{% static 'camping/images/g_tres.JPG' %}">
-							<img class="img-fluid" src="{% static 'camping/images/g_tres.JPG' %}" alt="Gallery Images">
-						</a>
-					</div>
-					<div class="col-sm-12 col-md-4 col-lg-4">
-						<a class="lightbox" href="{% static 'camping/images/g_cuatro.JPG' %}">
-							<img class="img-fluid" src="{% static 'camping/images/g_cuatro.JPG' %}" alt="Gallery Images">
-						</a>
-					</div>
-					<div class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="{% static 'camping/images/g_cinco.JPG' %}">
-							<img class="img-fluid" src="{% static 'camping/images/g_cinco.JPG' %}" alt="Gallery Images">
-						</a>
-					</div> 
-					<div class="col-sm-6 col-md-4 col-lg-4">
-						<a class="lightbox" href="{% static 'camping/images/g_seis.JPG' %}">
-							<img class="img-fluid" src="{% static 'camping/images/g_seis.JPG' %}" alt="Gallery Images">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Gallery -->
-	
-	<!-- Start Customer Reviews -->
-	<div class="customer-reviews-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>Fundadores y Empleados</h2>
-						<p>Conocenos a cadauno de nosotros</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 mr-auto ml-auto text-center">
-					<div id="reviews" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner mt-4">
-							<div class="carousel-item text-center active">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="{% static 'camping/images/founders_uno.jpeg' %}" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Luz Karime & Alexander</strong></h5>
-								<h6 class="text-dark m-0">Fundadores</h6>
-								<p class="m-0 pt-3">...</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle" src="{% static 'camping/images/web_devel_uno.jpg' %}" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Carlos Fernando Castillo</strong></h5>
-								<h6 class="text-dark m-0">Desarrollador Web</h6>
-								<p class="m-0 pt-3">Estudiante de Ingenieria de Sistemas y FreeLancer</p>
-							</div>
-	
-						</div>
-						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
-                    </div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Customer Reviews -->
-	
-	<!-- Start Contact info -->
-	<div class="contact-imfo-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<i class="fa fa-volume-control-phone"></i>
-					<div class="overflow-hidden">
-						<h4>Tels</h4>
-						<p class="lead">
-							+57 317 462-74-50 <br>+57 314-689-44-95
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-envelope"></i>
-					<div class="overflow-hidden">
-						<h4>Email</h4>
-						<p class="lead">
-							banana@camping.com
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-map-marker"></i>
-					<div class="overflow-hidden">
-						<h4>Ubicacion</h4>
-						<p class="lead">
-							<a href="">La Habana - Buga Colombia</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Contact info -->
-	
-	<!-- Start Footer -->
-	<footer class="footer-area bg-f">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<h3>Quienes Somos</h3>
-					<p>...</p>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Horarios de Atencios</h3>
-					<p><span class="text-color">Lunes: </span>Cerrado</p>
-					<p><span class="text-color">Mar-Dom :</span> 9:00 Am - 10:00 PM</p>
-					<p><span class="text-color">Festivos :</span> 9:00 Am - 7:00 PM</p>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Informacion de Contacto</h3>
-					<p class="lead"><a href="">La Habana, A 800 mtrs del Rio Guadalajara</a></p>
-					<p class="lead"><a href="#">+57 317 535-06-05</a></p>
-					<p><a href="#"> info@camping.com</a></p>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Suscribete</h3>
-					<div class="subscribe_form">
-						<form class="subscribe_form">
-							<input name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address..." type="email">
-							<button type="submit" class="submit">SUBSCRIBIRSE</button>
-							<div class="clearfix"></div>
-						</form>
-					</div>
-					<ul class="list-inline f-social">
-						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.instagram.com/bananaexperience.buga/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		
-		<div class="copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<p class="company-name">Tods los Dererechos Reservados 2021 <a href="bananacamping.com">bananacamping.com</a>
-						<br> Sitio Diseñado Por. <a href="https://seedcharlie.co/">seedcharlie.co</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</footer>
-	<!-- End Footer -->
-	
-	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+</div>
+<!-- End QT -->
 
-	<!-- ALL JS FILES -->
-	<script src="{% static 'camping/js/jquery-3.2.1.min.js' %}"></script>
-	<script src="{% static 'camping/js/popper.min.js' %}"></script>
-	<script src="{% static 'camping/js/bootstrap.min.js' %}"></script>
-    <!-- ALL PLUGINS -->
-	<script src="{% static 'camping/js/jquery.superslides.min.js' %}"></script>
-	<script src="{% static 'camping/js/images-loded.min.js' %}"></script>
-	<script src="{% static 'camping/js/isotope.min.js' %}"></script>
-	<script src="{% static 'camping/js/baguetteBox.min.js' %}"></script>
-	<script src="{% static 'camping/js/form-validator.min.js' %}"></script>
-    <script src="{% static 'camping/js/contact-form-script.js' %}"></script>
-    <script src="{% static 'camping/js/custom.js' %}"></script>
-</body>
-</html>
+<!-- Start Menu -->
+<div class="menu-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Servicios Especiales</h2>
+					<p>Kit de campamento, comida etc</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="special-menu text-center">
+					<div class="button-group filter-button-group">
+						<button class="active" data-filter="*">All</button>
+						<button data-filter=".carpa">Kit Campamento</button>
+						<button data-filter=".lunch">Comida</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row special-list">
+			<div class="col-lg-4 col-md-6 special-grid drinks carpa">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/kit_uno.jpg' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Kit Campamento 1</h4>
+						<p>Ideal para dos personas. Incluye colchoneta inflable y desayuno</p>
+						<h5>20.000 COP</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid drinks carpa">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/kit_dos.jpg' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Kit Campamento 2</h4>
+						<p>Para 4 personas. Incluye colchoneta inflable y desayuno</p>
+						<h5>40.000 COP</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid drinks carpa">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/kit_tres.jpg' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Kit Campamento 3</h4>
+						<p>Para seis personas. Incluye colchoneta inflable y desayuno</p>
+						<h5>60.000 COP</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid lunch comida">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/c_champus_uno.jpg' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Special Lunch 1</h4>
+						<p>Delicioso Chapús Valluno hecho en casa</p>
+						<h5>3.000 COP</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid lunch comida">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/c_empanadas_uno.jpg' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Empanadas</h4>
+						<p>Deliciosas Empanadas Vallunas de carne y de pollo hechas en casa</p>
+						<h5>1.000 COP</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid lunch comida">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/c_lulada_uno.jpg' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Lulada</h4>
+						<p>Rica Lulada cacera bien fria</p>
+						<h5>3.000 COP</h5>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+<!-- End Menu -->
+
+<!-- Start Gallery -->
+<div class="gallery-box">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Galeria de Imagenes</h2>
+					<p>Conoce los Paisajes de la Habana Buga</p>
+				</div>
+			</div>
+		</div>
+		<div class="tz-gallery">
+			<div class="row">
+				<div class="col-sm-12 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'camping/images/g_uno.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/g_uno.JPG' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'camping/images/g_dos.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/g_dos.JPG' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'camping/images/g_tres.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/g_tres.JPG' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-12 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'camping/images/g_cuatro.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/g_cuatro.JPG' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'camping/images/g_cinco.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/g_cinco.JPG' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'camping/images/g_seis.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/g_seis.JPG' %}" alt="Gallery Images">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Gallery -->
+
+<!-- Start Customer Reviews -->
+<div class="customer-reviews-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Fundadores y Empleados</h2>
+					<p>Conocenos a cadauno de nosotros</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 mr-auto ml-auto text-center">
+				<div id="reviews" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner mt-4">
+						<div class="carousel-item text-center active">
+							<div class="img-box p-1 border rounded-circle m-auto">
+								<img class="d-block w-100 rounded-circle"
+									src="{% static 'camping/images/founders_uno.jpeg' %}" alt="">
+							</div>
+							<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Luz Karime &
+									Alexander</strong></h5>
+							<h6 class="text-dark m-0">Fundadores</h6>
+							<p class="m-0 pt-3">...</p>
+						</div>
+						<div class="carousel-item text-center">
+							<div class="img-box p-1 border rounded-circle m-auto">
+								<img class="d-block w-100 rounded-circle"
+									src="{% static 'camping/images/web_devel_uno.jpg' %}" alt="">
+							</div>
+							<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Carlos Fernando
+									Castillo</strong></h5>
+							<h6 class="text-dark m-0">Desarrollador Web</h6>
+							<p class="m-0 pt-3">Estudiante de Ingenieria de Sistemas y FreeLancer</p>
+						</div>
+
+					</div>
+					<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+						<i class="fa fa-angle-left" aria-hidden="true"></i>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Customer Reviews -->
+
+{% endblock %}

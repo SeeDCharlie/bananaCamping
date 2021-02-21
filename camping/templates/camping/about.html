@@ -1,0 +1,217 @@
+{% extends 'camping/baset_uno.html' %}
+{% load static %}
+
+{% block styles%}
+
+<link rel="stylesheet" href="{% static 'camping/css/css_project/style_about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<!-- Start header -->
+<div class="all-page-title page-breadcrumb">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>Quienes Somos ? </h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End header -->
+
+<!-- Start About -->
+<div class="about-section-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<img src="{% static 'camping/images/f_nueve.jpg' %}" alt="" class="img-fluid">
+			</div>
+			<div class="col-lg-6 col-md-6 text-center">
+				<div class="inner-column">
+					<h1>Banana<span> Eco-Camping</span></h1>
+					<h4>Historia</h4>
+					<p>
+						La Habana pertenece a la zona rural oriental del municipio de Guadalajara de Buga - Valle,
+						es un corregimiento ubicado a 14 km del casco urbano de Buga, a una altura de 1550 msnm ,
+						conformado por las
+						veredas de La Habana, La Magdalena, La Piscina, El Janeiro, Las Frías, Alaska, El Diamante y
+						Guadualejo – La Planta,
+						Alto Cielo y la Cabaña. </p>
+					<p>
+						La salida desde Buga se hace por el batallón, recorre el rio Guadalajara , también llamado rio
+						de las piedras , el cual nace en la parte media de la Cordillera Central.
+					</p>
+					<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservacion</a>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="inner-pt">
+					<p>
+					<h2 class="title_text">Atractivos naturales y turísticos de La Habana</h2> <br>
+					<h3>Cascada La Milagrosa</h3>
+					<h3> Rio Guadalajara </h3>
+					<hr style="background-color: #DBA504"> <br>
+					<h1 class="title_text">Como llegar a Banana Eco-camping en La Habana?</h1> <br>
+
+
+					<h2 class="title_text">En carro desde Buga</h2> <br>
+					El recorrido en carro es de 25 minutos, se toma la salida de Buga por el batallón, derecho por
+					una carretera levemente inclinada y pavimentada, en el camino se observan balnearios,
+					restaurantes, se encuentra la vereda La Magdalena y a 2 km de esta la iglesia de La Habana,
+					después de cruzar un puente, se llega a un punto conocido como “Tres esquinas” el cual se puede
+					reconocer
+					por un aviso grande de “Bienvenidos a Alaska”, en este punto se toma la vía de la derecha que es una
+					destapada por
+					800 mts aproximadamente hasta llegar a nuestra zona de camping.
+					</p> <br>
+					<p>
+					<h2 class="title_text">En bus desde Buga</h2> <br>
+
+					En la Kra 10 entre calles 9 y 10 en el centro de Buga, encontraras el estacionamiento de buses
+					de la empresa Trans Buga, el cual tiene la ruta hacia La Habana, el recorrido dura 25 minutos
+					aproximadamente, en el camino se observan balnearios, restaurantes, pasamos por la vereda La
+					Magdalena, y a 2 km está la iglesia de La Habana, después de cruzar un puente, se llega a un
+					punto conocido como “Tres esquinas” el cual se puede reconocer por un aviso grande de
+					“Bienvenidos a Alaska”, AQUÍ se debe bajar, pues el bus sigue hacia la vereda Alaska, caminando
+					se toma la vía de la derecha que es una destapada por 800 mts hasta llegar a nuestra zona de
+					camping. <br>
+					En este mismo estacionamiento de la empresa Trans Buga sale la chiva a las 6 am y 12 am, la
+					chiva que tiene la ruta hacia La Habana llega hasta nuestra zona de camping. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End About -->
+
+<!-- Start Menu -->
+<div class="menu-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Fauna y Flora</h2>
+					<p>Conoce algunas de las especies de animales y plantas que encontraras en Banana Eco-Camping</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="special-menu text-center">
+					<div class="button-group filter-button-group">
+						<button data-filter="*">Todos</button>
+						<button class="active" data-filter=".plantas">Plantas</button>
+						<button data-filter=".insectos">Insectos</button>
+						<button data-filter=".aves">Aves</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row special-list">
+			<div class="col-lg-4 col-md-6 special-grid plantas">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/plantas/g_uno.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Palma de Banano Comun</h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid plantas">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/plantas/g_dos.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Hoja Espiral</h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid plantas">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/plantas/g_tres.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4></h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid plantas">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/plantas/g_cuatro.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4></h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 special-grid plantas">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/plantas/g_cinco.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4></h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 special-grid plantas">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/plantas/g_seis.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4></h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid insectos">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/insectos/g_uno.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4></h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid insectos">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/insectos/g_dos.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4></h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid insectos">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/galleria/insectos/g_tres.JPG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4></h4>
+						<p>...</p>
+						<h5>...</h5>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+<!-- End Menu -->
+
+{% endblock %}
