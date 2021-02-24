@@ -82,7 +82,7 @@
 								<div class="help-block with-errors"></div>
 							</div>
 							<div class="submit-button text-center">
-								<button class="btn btn-common" id="submit" type="submit">Enviar</button>
+								<button class="btn btn-common btnContReq" id="submit" type="button">Enviar</button>
 								<div id="msgSubmit" class="h3 text-center hidden"></div>
 								<div class="clearfix"></div>
 							</div>
@@ -95,4 +95,9 @@
 </div>
 <!-- End Contact -->
 
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'camping/js/js_camping/motorAjax.js' %}"></script>
+<script src="{% static 'camping/js/js_camping/controlContactRequest.js' %}"></script>
 {% endblock %}
