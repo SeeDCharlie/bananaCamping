@@ -8,4 +8,5 @@ urlpatterns = [
     path( 'services/', services, name = 'services'),
     path('reservations', reservations, name = 'reservations'),
     path('contact/', contact, name = 'contact'),
+    path('getContactForm/', getContactForm, name = 'getContactForm'),
 ]

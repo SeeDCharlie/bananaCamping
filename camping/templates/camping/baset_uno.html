@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="{% static 'camping/css/responsive.css' %}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'camping/css/custom.css' %}">
-    {% block styles %} 
+
+    <link rel="stylesheet" href="{% static 'camping/css/css_project/style_base.css' %}">
+    {% block styles %}
     {% endblock %}
 
 
@@ -70,7 +72,7 @@
                             </div>
                         </li>
                         -->
-                        
+
                         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contactanos</a></li>
                     </ul>
                 </div>
@@ -127,10 +129,11 @@
                 <div class="col-lg-3 col-md-6">
                     <h3>Quienes Somos</h3>
                     <p>
-                        Somos un equipo que sueña con un espacio propicio para la conexión con la naturaleza, 
-                        el amor por el conocimiento del entorno y contribuir con el equilibrio del ecosistema de 
-                        manera sostenible, donde la tranquilidad  este rodeada de consonancia,  lo cotidiano sea superfluo  
-                        y el paisaje sea la alternativa para  vislumbrar  atardeceres  de tonalidades vivas y noches cubiertas de constelaciones. 
+                        Somos un equipo que sueña con un espacio propicio para la conexión con la naturaleza,
+                        el amor por el conocimiento del entorno y contribuir con el equilibrio del ecosistema de
+                        manera sostenible, donde la tranquilidad este rodeada de consonancia, lo cotidiano sea superfluo
+                        y el paisaje sea la alternativa para vislumbrar atardeceres de tonalidades vivas y noches
+                        cubiertas de constelaciones.
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -185,6 +188,23 @@
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
+
+    <!--TOAST-->
+    <div class="" id="toastMsj">
+        <div class="row">
+            <div class="col-3 img">
+                <img class="img-fluid" alt="Responsive image" src="{% static 'camping/images/icoFav.png' %}" >
+            </div>
+            <div class="col-8 bodyTo">
+                <strong style="height: 1rem; font-size: 0.9rem; color: #ffffff; font-weight: bold;">BANACA CAMPING MSJ! <small class="titleToast"></small> </strong>
+                <div style="font-size: 0.8rem; color: #ffffff;" class="textToast">
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
     <!-- ALL JS FILES -->
     <script src="{% static 'camping/js/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'camping/js/popper.min.js' %}"></script>
@@ -197,6 +217,9 @@
     <script src="{% static 'camping/js/form-validator.min.js' %}"></script>
     <script src="{% static 'camping/js/contact-form-script.js' %}"></script>
     <script src="{% static 'camping/js/custom.js' %}"></script>
+    <script src="{% static 'camping/js/js_camping/motorAjax.js' %}"></script>
+    <script src="{% static 'camping/js/js_camping/controlBaseUno.js' %}"></script>
+    
 
     {% block scripts %} {% endblock %}
 

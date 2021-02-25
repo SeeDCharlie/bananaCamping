@@ -51,6 +51,7 @@ class contact_request(models.Model):
     nombre = models.CharField(max_length=60, blank=True, null=True, db_column='fname')
     no_celular = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True, db_column='cell_phone')
     email = models.CharField(max_length=50, blank=True, null=True, db_column='email')
+    mensaje = models.CharField(max_length=300, blank=True, null=True, db_column='message')
     fecha_solicitud = models.DateTimeField(blank=True,  auto_now=True, null = True, db_column='regis_date')
     atendido = models.BooleanField(default=False, db_column='check_soli')
 
