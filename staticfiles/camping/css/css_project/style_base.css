@@ -1,0 +1,73 @@
+#toastMsj {
+    visibility: hidden;
+    max-width: 300;
+    width: 100;
+    height: auto ;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    position: fixed;
+    top: 25%;
+    right: 5%;
+}
+#toastMsj .img {
+    background-color: rgba(83, 83, 83, 0.8);
+    padding: 7px;    
+}
+#toastMsj .bodyTo {
+    padding: 7px;
+    background-color: rgba(242, 163, 17, 1);
+}
+#toastMsj.show  {
+    visibility: visible;
+  
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+  }
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes expand {
+    from {min-width: 100px} 
+    to {min-width: 300px}
+  }
+  
+  @keyframes expand {
+    from {min-width: 100px}
+    to {min-width: 300px}
+  }
+  @-webkit-keyframes stay {
+    from {min-width: 100px} 
+    to {min-width: 300px}
+  }
+  
+  @keyframes stay {
+    from {min-width: 300px}
+    to {min-width: 300px}
+  }
+  @-webkit-keyframes shrink {
+    from {min-width: 300px;} 
+    to {min-width: 50px;}
+  }
+  
+  @keyframes shrink {
+    from {min-width: 300px;} 
+    to {min-width: 100px;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 60px; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 60px; opacity: 0;}
+  }

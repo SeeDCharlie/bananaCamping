@@ -11,7 +11,7 @@
 					<div class="col-md-12">
 						<h1 class="m-b-20"><strong>Bienvenidos a<br> Banana Eco-Camping</strong></h1>
 						<p class="m-b-40">
-							Un espacio para que tu y los que mas <br> quieres se conecten con nuestra madre naturaleza.
+							“ Un refugio engalanado de montañas y atardeceres de colores ”.
 						</p>
 						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Reservacion</a></p>
 					</div>
@@ -23,11 +23,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="m-b-20"><strong>Regalate un<br>Momento con la Naturaleza</strong></h1>
+						<h1 class="m-b-20"><strong>Ven, disfruta y aprende </strong></h1>
 						<p class="m-b-40">
-							" Mi deseo es quedarme así siempre: viviendo con <br> tranquilidad en un pequeño rincón de
-							la naturaleza" <br>
-							-- Claude Monet
+							“ La tierra tiene música para los que escuchan ” <br>
+							-- George Santayana
 						</p>
 						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Ver Mas</a></p>
 					</div>
@@ -43,7 +42,7 @@
 						<p class="m-b-40">
 							Te damos a conocer la gran variedad de flora <br> y fauna que encontraras en La Habana Buga
 						</p>
-						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Ver Mas</a></p>
+						<p><a class="btn btn-lg btn-circle btn-outline-new-white" href="#tz-gallery">Ver Mas</a></p>
 					</div>
 				</div>
 			</div>
@@ -65,17 +64,16 @@
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-12 text-center">
 				<div class="inner-column">
-					<h1>Banana Eco-Camping<span> La Habana Buga</span></h1>
+					<h1>Banana <span>Eco-Camping</span></h1>
 					<h4>Pequeña Historia</h4>
 					<p>
-						La Habana pertenece a la zona rural oriental del municipio de Guadalajara de Buga - Valle, es un 
-						corregimiento ubicado a 14 km del casco urbano de Buga, a una altura de 1550 msnm , conformado por las veredas 
-						de La Habana, La Magdalena, La Piscina, El Janeiro, Las Frías, Alaska, El Diamante y Guadualejo – La Planta, 
-						Alto Cielo y la Cabaña.
+						Banana Eco-Camping nace en el 2017, con la idea de brindar un espacio propicio para
+						la conexión con la naturaleza, promover la educación ambiental y contribuir con el equilibrio 
+						del ecosistema. Es un predio familiar ubicado en  la vereda La Piscina, corregimiento La Habana, con una 
+						extensión de 7.148 m2 y  en 48.18 m colinda con la rivera del rio Guadalajara, su cultivo principal es 
+						el banano y con base a este mostrar nuestro proceso orgánico. 
 					</p>
-					<p>
-						La salida desde Buga se hace por el batallón, recorre el rio Guadalajara , también llamado rio de las piedras , el cual nace en la parte media de la Cordillera Central. 
-					</p>
+
 					<a class="btn btn-lg btn-circle btn-outline-new-white" href="{% url 'about' %}">Seguir Leyendo</a>
 				</div>
 			</div>
@@ -89,11 +87,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 ml-auto mr-auto text-left">
-				<p class="lead ">
+				<p class="lead " style="color: rgb(255, 196, 0) !important;" >
 					"Aun el hombre más razonable tiene necesidad de volver a la Naturaleza, es decir, a su relación
-					fundamental ilógica con todas las cosas."
+					fundamental ilógica con todas las cosas." <br>
+					<span class="lead">Friedrich Nietzsche</span>
 				</p>
-				<span class="lead">Friedrich Nietzsche</span>
+				
 			</div>
 		</div>
 	</div>
@@ -106,8 +105,11 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="heading-title text-center">
-					<h2>Servicios Especiales</h2>
-					<p>Kit de campamento, comida etc</p>
+					<h2>Nuestros Servicios</h2>
+					<p>Kit de campamento, comida etc
+						<br>
+						<span style="font-weight: bold;"> Tarifa de Ingreso:</span>  $ 2.000 (incluye bolsa de comida para peces) 
+					</p>
 				</div>
 			</div>
 		</div>
@@ -117,7 +119,7 @@
 					<div class="button-group filter-button-group">
 						<button class="active" data-filter="*">All</button>
 						<button data-filter=".carpa">Kit Campamento</button>
-						<button data-filter=".lunch">Comida</button>
+						<button data-filter=".lunch">Gastronomia</button>
 
 					</div>
 				</div>
@@ -129,9 +131,9 @@
 				<div class="gallery-single fix">
 					<img src="{% static 'camping/images/kit_uno.jpg' %}" class="img-fluid" alt="Image">
 					<div class="why-text">
-						<h4>Kit Campamento 1</h4>
-						<p>Ideal para dos personas. Incluye colchoneta inflable y desayuno</p>
-						<h5>20.000 COP</h5>
+						<h4>Kit Campamento</h4>
+						<p>Carpa, cobija, colchoneta y almohada</p>
+						<h5>30.000 COP / Persona</h5>
 					</div>
 				</div>
 			</div>
@@ -140,31 +142,20 @@
 				<div class="gallery-single fix">
 					<img src="{% static 'camping/images/kit_dos.jpg' %}" class="img-fluid" alt="Image">
 					<div class="why-text">
-						<h4>Kit Campamento 2</h4>
-						<p>Para 4 personas. Incluye colchoneta inflable y desayuno</p>
-						<h5>40.000 COP</h5>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 special-grid drinks carpa">
-				<div class="gallery-single fix">
-					<img src="{% static 'camping/images/kit_tres.jpg' %}" class="img-fluid" alt="Image">
-					<div class="why-text">
-						<h4>Kit Campamento 3</h4>
-						<p>Para seis personas. Incluye colchoneta inflable y desayuno</p>
-						<h5>60.000 COP</h5>
+						<h4>Zona de Camping</h4>
+						<p>Sin Carpa</p>
+						<h5>15.000 COP / Persona</h5>
 					</div>
 				</div>
 			</div>
 
 			<div class="col-lg-4 col-md-6 special-grid lunch comida">
 				<div class="gallery-single fix">
-					<img src="{% static 'camping/images/c_champus_uno.jpg' %}" class="img-fluid" alt="Image">
+					<img src="{% static 'camping/images/c_torta_banano.jpeg' %}" class="img-fluid" alt="Image">
 					<div class="why-text">
-						<h4>Special Lunch 1</h4>
-						<p>Delicioso Chapús Valluno hecho en casa</p>
-						<h5>3.000 COP</h5>
+						<h4>Torta de Banano</h4>
+						<p>Delicioso y nutritivo hecho con prudctos locales</p>
+						<h5>2.000 COP</h5>
 					</div>
 				</div>
 			</div>
@@ -182,6 +173,28 @@
 
 			<div class="col-lg-4 col-md-6 special-grid lunch comida">
 				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/c_aguapanela_queso.JPEG' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Aguapanela con Queso</h4>
+						<p>Aguapanela caliente con queso</p>
+						<h5>5.000 COP</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid lunch comida">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/c_limonada.jpg' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Limonada</h4>
+						<p>Vaso de limonada bien frio</p>
+						<h5>1.500 COP</h5>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 special-grid lunch comida">
+				<div class="gallery-single fix">
 					<img src="{% static 'camping/images/c_lulada_uno.jpg' %}" class="img-fluid" alt="Image">
 					<div class="why-text">
 						<h4>Lulada</h4>
@@ -191,6 +204,16 @@
 				</div>
 			</div>
 
+			<div class="col-lg-4 col-md-6 special-grid lunch comida">
+				<div class="gallery-single fix">
+					<img src="{% static 'camping/images/c_champus_uno.jpg' %}" class="img-fluid" alt="Image">
+					<div class="why-text">
+						<h4>Vaso de Chapús</h4>
+						<p>Delicioso Chapús Valluno hecho en casa</p>
+						<h5>3.000 COP</h5>
+					</div>
+				</div>
+			</div>
 
 		</div>
 	</div>
@@ -208,21 +231,26 @@
 				</div>
 			</div>
 		</div>
-		<div class="tz-gallery">
+		<div class="tz-gallery" id="tz-gallery">
 			<div class="row">
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'camping/images/f_diez.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/f_diez.JPG' %}" alt="Gallery Images">
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4 col-lg-4">
+					<a class="lightbox" href="{% static 'camping/images/g_seis.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/g_seis.JPG' %}" alt="Gallery Images">
+					</a>
+				</div>
 				<div class="col-sm-12 col-md-4 col-lg-4">
 					<a class="lightbox" href="{% static 'camping/images/g_uno.JPG' %}">
 						<img class="img-fluid" src="{% static 'camping/images/g_uno.JPG' %}" alt="Gallery Images">
 					</a>
 				</div>
 				<div class="col-sm-6 col-md-4 col-lg-4">
-					<a class="lightbox" href="{% static 'camping/images/g_dos.JPG' %}">
-						<img class="img-fluid" src="{% static 'camping/images/g_dos.JPG' %}" alt="Gallery Images">
-					</a>
-				</div>
-				<div class="col-sm-6 col-md-4 col-lg-4">
-					<a class="lightbox" href="{% static 'camping/images/g_tres.JPG' %}">
-						<img class="img-fluid" src="{% static 'camping/images/g_tres.JPG' %}" alt="Gallery Images">
+					<a class="lightbox" href="{% static 'camping/images/services/rivera_uno.jpg' %}">
+						<img class="img-fluid" src="{% static 'camping/images/services/rivera_uno.jpg' %}" alt="Gallery Images">
 					</a>
 				</div>
 				<div class="col-sm-12 col-md-4 col-lg-4">
@@ -231,15 +259,11 @@
 					</a>
 				</div>
 				<div class="col-sm-6 col-md-4 col-lg-4">
-					<a class="lightbox" href="{% static 'camping/images/g_cinco.JPG' %}">
-						<img class="img-fluid" src="{% static 'camping/images/g_cinco.JPG' %}" alt="Gallery Images">
+					<a class="lightbox" href="{% static 'camping/images/g_tres.JPG' %}">
+						<img class="img-fluid" src="{% static 'camping/images/g_tres.JPG' %}" alt="Gallery Images">
 					</a>
 				</div>
-				<div class="col-sm-6 col-md-4 col-lg-4">
-					<a class="lightbox" href="{% static 'camping/images/g_seis.JPG' %}">
-						<img class="img-fluid" src="{% static 'camping/images/g_seis.JPG' %}" alt="Gallery Images">
-					</a>
-				</div>
+				
 			</div>
 		</div>
 	</div>
