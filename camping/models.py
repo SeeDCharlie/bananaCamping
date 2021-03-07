@@ -127,5 +127,41 @@ class users(AbstractBaseUser, PermissionsMixin):
 
 
 
+class carpas(models.Model):
 
+    nombre = models.CharField(max_length=30, null = False)
+    no_personas = models.DecimalField(max_digits=2, decimal_places=0, null=False)
+    no_carpas = models.DecimalField(max_digits=2, decimal_places=0, default=1, null=False)
+    no_disponibles = models.DecimalField(max_digits=2, decimal_places=0, default=no_carpas, null=True)
+    descripcion = models.CharField(max_length=300, null = True)
+
+    class Meta:
+        db_table = 'carpas'
+        verbose_name = "carpa"
+        verbose_name_plural = "carpas"
+
+
+class reservas(models.Model):
+
+    fecha_llegada = models.DateField(null=False)
+    hora_llegada = models.TimeField()
+    fecha_salida = models.DateField(null=False)
+    hora_salida = models.TimeField()
+    carpas = models.ManyToManyField('carpas')
+    no_personas = models.DecimalField( max_digits=2, decimal_places=0, default=2)
+    nombre = models.CharField(max_length=30, null = False)
+    celular = models.DecimalField(max_digits=10, decimal_places=0, default=2)
+    email = models.EmailField()
+    no_documento = models.DecimalField(max_digits=13, decimal_places=0)
+
+    class Meta:
+        db_table = 'reservations'
+        verbose_name = "reservacion"
+        verbose_name_plural = "reservaciones"
+
+        constraints = [
+            models.UniqueConstraint(fields=['carpas', 'fecha_llegada'], name='reserva_carpa_uno'),
+            models.UniqueConstraint(fields=['carpas', 'fecha_salida'], name='reserva_carpa_dos'),
+
+        ]
 
