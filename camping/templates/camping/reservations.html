@@ -10,6 +10,10 @@
 {% endblock %}
 
 {% block content %}
+
+
+
+
 <!-- Start All Pages -->
 <div class="all-page-title page-breadcrumb">
 	<div class="container text-center">
@@ -21,135 +25,213 @@
 	</div>
 </div>
 <!-- End All Pages -->
-
-<!-- Start Reservation -->
-<div class="reservation-box">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="heading-title text-center">
-					<h2>Reservación</h2>
-					<p>Haga su reservacion y arma un plan perfecto</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12">
-				<div class="contact-block">
-
-					<div class="row">
-						<div class="col-12 reservationBorder">
-
-							<div class="form-row">
-								<div class="col-8">
-									<div class="form-group">
-										<label for="daterangeReser">Fecha y Hora de Reservación</label>
-										<input type="text" class="form-control" name="daterangeReser"
-											/>
-									</div>
-								</div>
-								<div class="col-2">
-									<div class="form-group">
-										<label for="no_pers">Número de Personas</label>
-										<input type="number" class="form-control" id="no_pers" value="2" />
-									</div>
-								</div>
-								<div class="col-2 submit-button text-center">
-									<button class="btn btn-common" id="submit" type="button">Reservar</button>
-									<div id="msgSubmit" class="h3 text-center hidden"></div>
-									<div class="clearfix"></div>
-								</div>
-							</div>
-
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-			
-			<div class="col-7 reservationBorderDos">
-
-
-
-
-			</div>
-
-			<div class="col reservationBorderDos resumReserva" >
-				<h2>Reservación</h2><br>
-
-				<div class="row align-items-center itemResum">
-					<div class="col-7">
-						<h1 class="titleResum">Zona camping <br> <span>para 2 personas</span></h1>
-					</div>
-					<div class="col-5">
-						<h2>$ 30.000 COP </h2>
-						
-					</div>
-				</div>
-
-				<div class="row carpasSelect">
-
-				</div> 
-				<div class="row">
-					<button class="btn btn-success">Siguiente</button>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<!-- End Reservation -->
-
-	<!-- Start Customer Reviews -->
-	<div class="customer-reviews-box">
+<div class="blockReservation">
+	<!-- Start Reservation -->
+	<div class="reservation-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="heading-title text-center">
-						<h2>Fundadores y Empleados</h2>
-						<p>Conocenos a cada uno de nosotros</p>
+						<h2>Reservación</h2>
+						<p>Haga su reservacion y arma un plan perfecto</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8 mr-auto ml-auto text-center">
-					<div id="reviews" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner mt-4">
-							<div class="carousel-item text-center active">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle"
-										src="{% static 'camping/images/founders_uno.jpeg' %}" alt="">
+				<div class="col-12">
+					<div class="contact-block">
+
+						<div class="row">
+							<div class="col-12 reservationBorder">
+
+								<div class="form-row">
+									<div class="col-8">
+										<div class="form-group">
+											<label for="daterangeReser">Fecha y Hora de Reservación</label>
+											<input type="text" class="form-control" id="daterangeReser" />
+										</div>
+									</div>
+									<div class="col-2">
+										<div class="form-group">
+											<label for="no_pers">Número de Personas</label>
+											<input type="number" class="form-control" id="no_pers" value="2" />
+										</div>
+									</div>
+									<div class="col-2 submit-button text-center">
+										<button class="btn btn-common" id="submit" type="button">Reservar</button>
+										<div id="msgSubmit" class="h3 text-center hidden"></div>
+										<div class="clearfix"></div>
+									</div>
 								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Luz Karime &
-										Alexander</strong></h5>
-								<h6 class="text-dark m-0">Fundadores</h6>
-								<p class="m-0 pt-3">...</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1 border rounded-circle m-auto">
-									<img class="d-block w-100 rounded-circle"
-										src="{% static 'camping/images/web_devel_uno.jpg' %}" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Carlos Fernando
-										Castillo</strong></h5>
-								<h6 class="text-dark m-0">Desarrollador Web</h6>
-								<p class="m-0 pt-3">Estudiante de Ingenieria de Sistemas y FreeLancer</p>
+
+
 							</div>
 
 						</div>
-						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
 					</div>
+				</div>
+
+				<div class="col-7 reservationBorderDos">
+
+					<div class="itemCarpa">
+						<div class="row align-items-center">
+							<div class="col-5">
+								<img class="img-fluid imgItemCarpa" src="{% static 'camping/images/carpaUno.jpg' %}"
+									alt="Image">
+							</div>
+							<div class="col-7">
+								<p class="row form-group">
+									<span class="col-12 titleResum">nombre carpa</span>
+									<span class="col-12">descripcion</span>
+									<span class="col-12">precio</span>
+								</p>
+
+								<div class="form-group">
+									<div class="form-row align-items-center">
+										<div class="col form-group">
+											<label>Cantidad maxima disponible </label>
+
+											<div class="form-row " role="group">
+												<div class="col-3">
+													<input style="max-height: 30px !important;" type="number" max="3"
+														min="1" value="1" class="form-control" />
+												</div>
+
+												<div class="row align-items-center">
+													<div class="col btn-group-sm btn-group-toggle ">
+														<button type="button" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+														<button type="button" class="btn btn-danger"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+									<button class="col-12 btn btn-warning"><i class="fa fa-cart-plus" aria-hidden="true"></i> Agregar </button>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+
+				<div class="col reservationBorderDos resumReserva">
+					<div class="row align-item-center" style="margin-top: 15px;">
+						<h1 class="col-8 align-self-center">Reservación</h1>
+						<img class="img-fluid align-self-right col-3" src="{% static 'camping/images/icoFav.png' %}"
+							alt="Image">
+					</div>
+					<hr>
+					<div class="form-group itemResum">
+						<div class="row rowItem">
+							<h3 class="col-5 align-self-center">Fecha Llegada</h3>
+							<h4 class="col-7 align-self-center" id="fechaLlegada"></h4>
+						</div>
+						<div class="row rowItem">
+							<h3 class="col-5 align-self-center">Fecha Salida</h3>
+							<h4 class="col-7 align-self-center" id="fechaSalida"></h4>
+						</div>
+					</div>
+
+					<div class="form-group itemResum ">
+						<div class="row rowItem">
+							<div class="col-5 align-self-center">
+								<p>
+									<span class="titleResum">Zona camping</span>
+									Cantidad personas:
+									<span id="cantPersZona">2 personas</span>
+								</p>
+							</div>
+							<div class="col-7 align-self-center">
+								<h2 id="priceZoCam">$ 30.000 COP </h2>
+							</div>
+						</div>
+					</div>
+					<hr>
+
+					<div class="form-group itemResum carpasSelectes">
+						<div class="row rowItem">
+							<div class="col-6 align-self-center">
+								<p>
+									<span class="titleResum">Carpa #1 </span>
+								</p>
+								Capacidad : <span> 2 personas</span>
+							</div>
+							<div class="col-6 align-self-center">
+								<h2>$ 30.000 COP </h2>
+							</div>
+						</div>
+					</div>
+
+
+					<hr>
+					<div class="row rowItem col">
+						<h2>Total : </h2>
+					</div>
+					<div class="row rowItem">
+						<button class="btn btn-warning col">Siguiente  <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- End Reservation -->
+	</div>
+</div>
+<!-- Start Customer Reviews -->
+<div class="customer-reviews-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Fundadores y Empleados</h2>
+					<p>Conocenos a cada uno de nosotros</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 mr-auto ml-auto text-center">
+				<div id="reviews" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner mt-4">
+						<div class="carousel-item text-center active">
+							<div class="img-box p-1 border rounded-circle m-auto">
+								<img class="d-block w-100 rounded-circle"
+									src="{% static 'camping/images/founders_uno.jpeg' %}" alt="">
+							</div>
+							<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Luz Karime &
+									Alexander</strong></h5>
+							<h6 class="text-dark m-0">Fundadores</h6>
+							<p class="m-0 pt-3">...</p>
+						</div>
+						<div class="carousel-item text-center">
+							<div class="img-box p-1 border rounded-circle m-auto">
+								<img class="d-block w-100 rounded-circle"
+									src="{% static 'camping/images/web_devel_uno.jpg' %}" alt="">
+							</div>
+							<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Carlos Fernando
+									Castillo</strong></h5>
+							<h6 class="text-dark m-0">Desarrollador Web</h6>
+							<p class="m-0 pt-3">Estudiante de Ingenieria de Sistemas y FreeLancer</p>
+						</div>
+
+					</div>
+					<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+						<i class="fa fa-angle-left" aria-hidden="true"></i>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+						<span class="sr-only">Next</span>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<!-- End Customer Reviews -->
 
 	{% endblock %}
