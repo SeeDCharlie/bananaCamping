@@ -73,50 +73,71 @@
 
 				<div class="col-7 reservationBorderDos">
 
+
+
+					{% for carpa in carpas %}
+
+
+					<!--ITEM CARPA-->
+
 					<div class="itemCarpa">
 						<div class="row align-items-center">
 							<div class="col-5">
-								<img class="img-fluid imgItemCarpa" src="{% static 'camping/images/carpaUno.jpg' %}"
+								<img class="img-fluid imgItemCarpa" src="{{carpa.url_img}}"
 									alt="Image">
 							</div>
+
 							<div class="col-7">
 								<p class="row form-group">
-									<span class="col-12 titleResum">nombre carpa</span>
-									<span class="col-12">descripcion</span>
-									<span class="col-12">precio</span>
+									<span class="col-12 titleResum">{{carpa.nombre}}</span>
+									<span class="col-12">{{carpa.descripcion}}</span>
+									<span class="col-12">{{carpa.precio}}</span>
 								</p>
 
 								<div class="form-group">
 									<div class="form-row align-items-center">
 										<div class="col form-group">
-											<label>Cantidad maxima disponible </label>
+											<label>Cantidad maxima disponible {{cant_disponible}}</label>
 
 											<div class="form-row " role="group">
 												<div class="col-3">
-													<input style="max-height: 30px !important;" type="number" max="3"
+													<input style="max-height: 30px !important;" type="number" max="{{cant_disponible}}"
 														min="1" value="1" class="form-control" />
 												</div>
 
 												<div class="row align-items-center">
 													<div class="col btn-group-sm btn-group-toggle ">
-														<button type="button" class="btn btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-														<button type="button" class="btn btn-danger"><i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+														<button type="button" class="btn btn-success"><i
+																class="fa fa-plus-circle"
+																aria-hidden="true"></i></button>
+														<button type="button" class="btn btn-danger"><i
+																class="fa fa-minus-circle"
+																aria-hidden="true"></i></button>
 													</div>
 												</div>
 											</div>
 										</div>
 
 									</div>
-
-									<button class="col-12 btn btn-warning"><i class="fa fa-cart-plus" aria-hidden="true"></i> Agregar </button>
-								</div>
+									{% if cant_disponible == 0 %}
+									<button class="col-12 btn btn-warning"><i class="fa fa-cart-plus"
+										aria-hidden="true"></i> Agregar </button>
+									{% else %}
+									<div class="col">
+										<h4 style="text-align: center; color: darkred;">Para esta fecha no tenemos esta carpa disponible</h4>
+									</div>
+								
+									{% endif %}
+									</div>
 
 							</div>
 						</div>
 
 					</div>
 
+					<!--FIN ITEM CARPA-->
 
+					{% endfor %}
 				</div>
 
 				<div class="col reservationBorderDos resumReserva">
@@ -173,7 +194,8 @@
 						<h2>Total : </h2>
 					</div>
 					<div class="row rowItem">
-						<button class="btn btn-warning col">Siguiente  <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+						<button class="btn btn-warning col">Siguiente <i class="fa fa-chevron-right"
+								aria-hidden="true"></i></button>
 					</div>
 				</div>
 
@@ -231,7 +253,7 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 	<!-- End Customer Reviews -->
 
 	{% endblock %}

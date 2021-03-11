@@ -12,7 +12,9 @@ def services(request):
     return render(request, 'camping/services.html')
 
 def reservations(request):
-    return render(request, 'camping/reservations.html')
+
+    context = {'carpas': carpas.objects.all()}
+    return render(request, 'camping/reservations.html', context=context)
 
 def contact(request):
     return render(request, 'camping/contact.html')

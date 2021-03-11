@@ -119,7 +119,7 @@ class users(AbstractBaseUser, PermissionsMixin):
     @property
     def is_staff(self):
         return self.usuario_administrador
-
+    
     class Meta:
         db_table = 'users'
         verbose_name = "usuario"
@@ -132,8 +132,12 @@ class carpas(models.Model):
     nombre = models.CharField(max_length=30, null = False)
     no_personas = models.DecimalField(max_digits=2, decimal_places=0, null=False)
     no_carpas = models.DecimalField(max_digits=2, decimal_places=0, default=1, null=False)
-    no_disponibles = models.DecimalField(max_digits=2, decimal_places=0, default=no_carpas, null=True)
     descripcion = models.CharField(max_length=300, null = True)
+    url_img = models.CharField(max_length=100)
+    precio = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, default=60000)
+ 
+    def __str__(self):
+        return self.nombre
 
     class Meta:
         db_table = 'carpas'
@@ -141,18 +145,26 @@ class carpas(models.Model):
         verbose_name_plural = "carpas"
 
 
+class cant_carpas(models.Model):
+    carpa = models.ForeignKey('carpas', models.DO_NOTHING, db_column='carp' )
+    reserva = models.ForeignKey('reservas', models.DO_NOTHING, db_column='reser' )
+    cantidad = models.PositiveSmallIntegerField(default = 1, db_column='cant', null = False )
+
 class reservas(models.Model):
 
     fecha_llegada = models.DateField(null=False)
     hora_llegada = models.TimeField()
     fecha_salida = models.DateField(null=False)
     hora_salida = models.TimeField()
-    carpas = models.ManyToManyField('carpas')
+
     no_personas = models.DecimalField( max_digits=2, decimal_places=0, default=2)
     nombre = models.CharField(max_length=30, null = False)
     celular = models.DecimalField(max_digits=10, decimal_places=0, default=2)
     email = models.EmailField()
     no_documento = models.DecimalField(max_digits=13, decimal_places=0)
+
+    def __str__(self):
+        return self.nombre
 
     class Meta:
         db_table = 'reservations'

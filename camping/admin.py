@@ -54,3 +54,5 @@ class solitudServAdmin(admin.ModelAdmin):
 admin.site.register(service)
 admin.site.register(type_user)
 admin.site.register(state_user)
+admin.site.register(reservas)
+admin.site.register(carpas)
