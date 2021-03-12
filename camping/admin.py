@@ -56,3 +56,6 @@ admin.site.register(type_user)
 admin.site.register(state_user)
 admin.site.register(reservas)
 admin.site.register(carpas)
+admin.site.register(estado_reservas)
+admin.site.register(cant_carpas)
+

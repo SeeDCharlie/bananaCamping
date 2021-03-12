@@ -16,10 +16,10 @@ $(function () {
     timePicker: true,
     minDate: new Date(),
     locale: {
-      format: 'DD/MM hh:mm A'
+      format: 'DD/MM/YY hh:mm A'
     },
-    startDate: dateOne,
-    endDate: dateTow,
+    /*startDate: dateOne,
+    endDate: dateTow,*/
 
   });
 

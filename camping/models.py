@@ -150,6 +150,15 @@ class cant_carpas(models.Model):
     reserva = models.ForeignKey('reservas', models.DO_NOTHING, db_column='reser' )
     cantidad = models.PositiveSmallIntegerField(default = 1, db_column='cant', null = False )
 
+     
+    def __str__(self):
+        return str(self.carpa) + str(self.reserva)
+
+    class Meta:
+        db_table = 'cant_carpa'
+        verbose_name = "carpas por reserva"
+        verbose_name_plural = "carpas por reserva"
+
 class reservas(models.Model):
 
     fecha_llegada = models.DateField(null=False)
@@ -163,6 +172,8 @@ class reservas(models.Model):
     email = models.EmailField()
     no_documento = models.DecimalField(max_digits=13, decimal_places=0)
 
+    estado = models.ForeignKey('estado_reservas', models.DO_NOTHING, default=1 ,db_column='state')
+
     def __str__(self):
         return self.nombre
 
@@ -171,9 +182,16 @@ class reservas(models.Model):
         verbose_name = "reservacion"
         verbose_name_plural = "reservaciones"
 
-        constraints = [
-            models.UniqueConstraint(fields=['carpas', 'fecha_llegada'], name='reserva_carpa_uno'),
-            models.UniqueConstraint(fields=['carpas', 'fecha_salida'], name='reserva_carpa_dos'),
 
-        ]
+class estado_reservas(models.Model):
 
+    nombre = models.CharField(max_length=30, null = False)
+    descripcion = models.CharField(max_length=300, null = True)
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        db_table = 'states_reser'
+        verbose_name = "estado de la reserva"
+        verbose_name_plural = "estados de reserva"

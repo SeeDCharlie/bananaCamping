@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 import json
 from .models import *
+from datetime import datetime, timedelta 
+from .controls.controlReservations import *
 
 def index(request):
     return render(request, 'camping/index.html')
@@ -11,9 +13,15 @@ def about(request):
 def services(request):
     return render(request, 'camping/services.html')
 
-def reservations(request):
+def reservations(request, fecha_inicio = datetime.now().strftime("%d/%m/%y %H:%M %P") , fecha_fin = (datetime.now() + timedelta(1)).strftime("%d/%m/%y %H:%M %P"), cant_pers = 2):
 
-    context = {'carpas': carpas.objects.all()}
+    getCarpDisponibles(carpas.objects.get(pk=1), fecha_inicio, fecha_fin)
+
+    context = {'carpas': carpas.objects.all() , 'fecha_inicio': fecha_inicio, 'fecha_fin': fecha_fin}
+
+
+
+    print(context)
     return render(request, 'camping/reservations.html', context=context)
 
 def contact(request):
