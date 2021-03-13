@@ -15,7 +15,7 @@ def services(request):
 
 def reservations(request, fecha_inicio = datetime.now().strftime("%d/%m/%y %H:%M %P") , fecha_fin = (datetime.now() + timedelta(1)).strftime("%d/%m/%y %H:%M %P"), cant_pers = 2):
 
-    getCarpDisponibles(carpas.objects.get(pk=1), fecha_inicio, fecha_fin)
+    #getCarpDisponibles(carpas.objects.get(pk=1), fecha_inicio, fecha_fin)
 
     context = {'carpas': carpas.objects.all() , 'fecha_inicio': fecha_inicio, 'fecha_fin': fecha_fin}
 
