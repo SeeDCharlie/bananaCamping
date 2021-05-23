@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'k$k2tdzi6l6yltgy6$@#sqvox@kfyc7v94s8hfn_1l+v55n!n)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['bananacamping.com']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['bananacamping.com']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'bananaCamping.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'admseed_banana_db',
-        'USER': 'admseed_banana_admin',
-        'PASSWORD': '#vlf[TC-O~Ma',
-        'HOST': 'bananacamping.com',
+        'NAME': 'seedch_banana_db',
+        'USER': 'seedch_banana_admin',
+        'PASSWORD': 'Emn*%6PB$2Gv',
+        'HOST': 'seedcharlie.co',
         'PORT': '3306',
     }
 }
